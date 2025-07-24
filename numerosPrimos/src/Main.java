@@ -6,7 +6,7 @@ public class Main {
         List<List<Integer>> listaDeNumeros = Arrays.asList(
                 Arrays.asList(1, 2, 3, 4),
                 Arrays.asList(5, 6, 7, 8),
-                Arrays.asList(9, 10, 11, 12)
+                Arrays.asList(9, 10, 11, 12,13)
         );
 
         // Função para verificar se um número é primo

@@ -12,13 +12,13 @@ public class Main {
                 new Produto("Camiseta", 49.90, "Vestuário")
         );
 
-        List<Produto> resultado = produtos.stream()
+        List<Produto> tresMaisBaratos = produtos.stream()
                 .filter(p -> p.getCategoria().equals("Eletrônicos"))
-                .filter(p -> p.getPreco() < 1000.00)
                 .sorted(Comparator.comparingDouble(Produto::getPreco))
+                .limit(3)
                 .collect(Collectors.toList());
 
         System.out.println("Produtos de Eletrônicos com preço < R$1000 (ordenados):");
-        resultado.forEach(System.out::println);
+        tresMaisBaratos.forEach(System.out::println);
     }
 }

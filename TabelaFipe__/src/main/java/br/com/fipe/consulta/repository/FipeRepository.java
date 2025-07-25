@@ -1,9 +1,10 @@
-package repository;
 
-import model.Marca;
-import model.Modelo;
-import model.Veiculo;
-import model.AnoModelo;
+package br.com.fipe.consulta.repository;
+import br.com.fipe.consulta.model.AnoModelo;
+import br.com.fipe.consulta.model.Marca;
+import br.com.fipe.consulta.model.Modelo;
+import br.com.fipe.consulta.model.Veiculo;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;

@@ -1,23 +1,22 @@
-package application;  // Corrigido o pacote
+package br.com.fipe.consulta.application;
 
-import model.Marca;
-import model.Veiculo;
-import repository.FipeRepository;
-import service.FipeService;
+import br.com.fipe.consulta.model.Marca;
+import br.com.fipe.consulta.model.Veiculo;
+import br.com.fipe.consulta.repository.FipeRepository;
+import br.com.fipe.consulta.service.FipeService.ServicoFipe;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 @Component
 public class ApplicationRunner implements CommandLineRunner {
-    private final FipeService fipeService;
+    private final ServicoFipe fipeService;
     private final FipeRepository fipeRepository;
     private final Scanner scanner = new Scanner(System.in);
 
-    public ApplicationRunner(FipeService fipeService, FipeRepository fipeRepository) {
+    public ApplicationRunner(ServicoFipe fipeService, FipeRepository fipeRepository) {
         this.fipeService = fipeService;
         this.fipeRepository = fipeRepository;
     }

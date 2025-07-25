@@ -1,15 +1,19 @@
-import java.util.Optional;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println(processaNumero(Optional.of(5)));    // Saída: Optional[25]
-        System.out.println(processaNumero(Optional.of(-3)));   // Saída: Optional.empty
-        System.out.println(processaNumero(Optional.empty()));  // Saída: Optional.empty
+        System.out.println(obterPrimeiroEUltimoNome("  João Carlos Silva   ")); // Saída: "João Silva"
+        System.out.println(obterPrimeiroEUltimoNome("Maria   ")); // Saída: "Maria"
     }
 
-    public static Optional<Integer> processaNumero(Optional<Integer> numero) {
-        return numero
-                .filter(n -> n > 0)        // Filtra apenas números positivos
-                .map(n -> n * n);           // Calcula o quadrado se presente e positivo
+    public static String obterPrimeiroEUltimoNome(String nomeCompleto) {
+        // Remove espaços extras e divide em partes
+        String[] partes = nomeCompleto.trim().split("\\s+");
+
+        // Se só tiver um nome, retorna ele mesmo
+        if (partes.length == 1) {
+            return partes[0];
+        }
+
+        // Combina primeiro e último nome
+        return partes[0] + " " + partes[partes.length - 1];
     }
 }

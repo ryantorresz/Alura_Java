@@ -6,7 +6,6 @@ import java.awt.event.*;
 import java.util.Random;
 import java.util.ArrayList;
 
-// Classe principal que representa o jogo da cobra, estendendo JFrame para criar a janela
 public class SnakeGame extends JFrame {
     // Constantes para configurar o tamanho da janela e das unidades do jogo
     private static final int LARGURA = 800; // Largura da janela
